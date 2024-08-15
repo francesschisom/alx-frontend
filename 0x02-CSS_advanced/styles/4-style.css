@@ -1,9 +1,6 @@
-/* Smooth transition while scrolling */
-html {
-    scroll-behavior: smooth;
-}
 
-/* Define custom properties (CSS variables) at the root level */
+/* add variables for fonts */
+
 :root {
     --color-primary: #d73953;
     --color-black: #090909;
@@ -11,29 +8,36 @@ html {
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
     --text-color: var(--color-black);
+
+    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* Set the foreground color (text color) for the body using the custom text-color */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--text-color);
+    font-family: var(--font-family-base);
 }
 
-/* Set the foreground color (text color) for all anchor elements using the custom text-color */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+}
+
 a {
     color: var(--text-color);
 }
 
-/* Hide elements with the class "visually-hidden" */
 .visually-hidden {
     display: none;
 }
 
-/* Set the foreground color (text color) for elements with the class "card-category" using the custom color-primary */
 .card-category {
     color: var(--color-primary);
 }
 
-/* Set the foreground color (text color) for elements with the class "section-tagline" using the custom color-primary */
 .section-tagline {
     color: var(--color-primary);
 }
